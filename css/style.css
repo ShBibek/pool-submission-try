@@ -1,0 +1,162 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-image:url("../images/floor13.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+}
+.loadingPage{
+	width: 100%;
+	height: 100%;
+	background-color: #81BEF7;
+	background-image: url("../images/loading45.gif");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 10;
+	top: 0px;
+	left: 0px;
+}
+.loadingWrp{
+	position: relative;
+	width: 50%;
+	height: 3%;
+	margin: 25%;
+	background-color: blue;
+	overflow: hidden;
+}
+.background{
+	margin:100px auto;
+	width:1200px;
+	height:500px;
+}
+.board{
+	position: relative;
+	width: 770px;
+	height: 430px;
+	background-image:url('../images/final-board.png');
+	float: left;
+	top: 38px;
+	border-radius: 5%;
+	display: block;
+}
+.info-board{
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	width: 400px;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	border-radius: 5%;
+	background-color: orange;
+	visibility: hidden;
+}
+.info-board img{
+	width: 100%;
+	height: 100%;
+}
+.blueBall{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	top: 0px;
+	left: 0px;
+	background:url("../images/blue-ball.png");
+}
+.redBall{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	top: 0px;
+	left: 0px;
+	background:url("../images/zred1.png");
+}
+.whiteBall{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	top: 0px;
+	left: 0px;
+	background-color:white; 
+}
+.blackBall{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	top: 0px;
+	left: 0px;
+	background-color: black;
+}
+
+.stick{
+	height: 12px;
+	position: relative;
+	top: 100px;
+}
+.innerstick{
+	width: 383px;
+	height: 12px;
+	background:url('../images/stick1.png');
+	position: absolute;
+	float: left;
+	display: block;
+}
+.stick-arrow{
+	width: 383px;
+	height: 0px;
+	margin: 5px 0px;
+	float: right;
+	border-bottom: 2px dotted brown;
+	
+}
+.pow-wrapper{
+	width: 170px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	margin-top:40px;
+	background-image:url("../images/game-over.jpg");
+	background-size: 100%;
+}
+.pow-bg{
+	width: 170px;
+	height: 300px;
+	background-color: red;
+	position: absolute;
+	top:20px;
+}
+.score-wrp{
+	float: left;
+	position: relative;
+	width: 240px;
+	height: 500px; 
+	background-image:url("../images/floor10.jpeg");
+	background-size: 100%;
+}
+.score-main{
+	border: 3px solid red;
+	width: 90%;
+	margin: 30px auto;
+	height: 200px;
+	background-color: green;
+}
+.score-block{
+	margin: 10px auto;
+	width: 100%;
+	background-image:url("../images/floor8.jpeg");
+	height: 30px;
+	text-align: center;
+	line-height: 20px;
+	font-family: sans-serif;
+}
+
+
