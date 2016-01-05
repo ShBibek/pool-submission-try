@@ -141,10 +141,10 @@ function Rule(){
 		//check if game is over
 		if(blackEntered == true){
 			if(currentPlayer.ballCatageory !=2 && foulFlag != true && currentPlayer.ballsLeft == 0){
-				displayContent("player number "+ currentPlayer.identity + " won the game");
+				displayContent("PLAYER "+ currentPlayer.identity + " : WINNER");
 			}
 			else{
-				displayContent("player number "+ nextPlayer.identity + " won the game");
+				displayContent("PLAYER "+ nextPlayer.identity + " : WINNER");
 			}
 			gameOverFlag = true;
 
@@ -155,17 +155,17 @@ function Rule(){
 				assignToPlayer(currentPlayer,false,0,counter[0]);
 				var hitLeft = hitCounter(nextPlayer); //counting hit offered to next player
 				assignToPlayer(nextPlayer,true,hitLeft,counter[1]);
-				displayContent("foul");
+				displayContent("FOUL");
 			}
 			else if(foulFlag == false && (currentPlayer.hitRemaining == 2 || successFlag == true)){ //same player is offered another hit
 				assignToPlayer(currentPlayer,true,1,counter[0]);	
 				assignToPlayer(nextPlayer,false,0,counter[1]);
-				displayContent("SAME PLAYER NEXT HIT");
+				displayContent("NEXT HIT");
 			}
 			else{ //player changed
 				assignToPlayer(currentPlayer,false,0,counter[0]);
 				assignToPlayer(nextPlayer,true,1,counter[1]);
-				displayContent("PLAYER CHANGED");
+				displayContent("NEXT PLAYER");
 			}	
 		}
 
@@ -186,12 +186,12 @@ function Rule(){
 	var scoreBoardDecoder = function(contents){
 		var decodedValue = contents;
 		if(contents[1] == true){
-			decodedValue[1] = "active";
-			decodedValue[6] = "passive";
+			decodedValue[1] = "ACTIVE";
+			decodedValue[6] = "PASSIVE";
 		}
 		if(contents[1] == false){
-			decodedValue[1] = "passive";
-			decodedValue[6] = "active";
+			decodedValue[1] = "PASSIVE";
+			decodedValue[6] = "ACTIVE";
 		}
 		if(contents[3] == 2){
 			decodedValue[3] = "RED + BLUE";

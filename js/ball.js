@@ -21,8 +21,8 @@ function Ball(className){
 	}
 	this.element = ballView(className);
 	//audio proterty
-	var sound = new Audio("collide.mp3");
-	sound.volume = 0.5;
+	
+	
 
 	var meu = 0.03;
 	var gravity = 0.098;
@@ -93,8 +93,9 @@ function Ball(className){
 			ball.posX = midX + ball.radius * (ball.posX - that.posX)/dCenters;
 			ball.posY = midY + ball.radius * (ball.posY - that.posY)/dCenters;
 			//calculation of sound intensity
-			var a = resultantVector(ball.velX,ball.velY)*(1-ball.collisonFactor)+resultantVector(that.velX,that.velY)*(1-that.collisonFactor);
-			sound.volume = a/(2*30*(1-ball.collisonFactor));
+			var sound = new Audio("collide.mp3");
+			var temp = (resultantVector(ball.velX,ball.velY)*(1-ball.collisonFactor)+resultantVector(that.velX,that.velY)*(1-that.collisonFactor))/(2*30*(1-ball.collisonFactor));
+			temp>1?sound.volume = 1:sound.volume = temp;
 			sound.play();
 		}
 	}

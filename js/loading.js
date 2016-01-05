@@ -41,7 +41,7 @@ function Loading(){
 		rightPer -= step;
 		moveRight(rightPer);
 		if(rightPer <= 0){
-			hideElement();
+			hideElement(); //hide the given div
 			rightPer = 100;	
 		}
 		

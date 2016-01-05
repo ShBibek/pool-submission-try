@@ -21,8 +21,6 @@ function WhiteBall(){
 		}
 	}
 	this.element = whiteBallView();
-	//audio proterty
-	var sound = new Audio("collide.mp3");
 
 	//model section
 	var meu = 0.03;
@@ -118,8 +116,9 @@ function WhiteBall(){
 				that.collisionFlag=true;
 				that.firstCollide=ball.identity;
 			}
-			var a = resultantVector(ball.velX,ball.velY)*(1-ball.collisonFactor)+resultantVector(that.velX,that.velY)*(1-that.collisonFactor);
-			sound.volume = a/(2*30*(1-ball.collisonFactor));
+			var sound = new Audio("collide.mp3");
+			var temp = (resultantVector(ball.velX,ball.velY)*(1-ball.collisonFactor)+resultantVector(that.velX,that.velY)*(1-that.collisonFactor))/(2*30*(1-ball.collisonFactor));
+			temp>1?sound.volume = 1:sound.volume = temp;
 			sound.play();
 		}
 	}

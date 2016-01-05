@@ -3,7 +3,7 @@
 	margin: 0px;
 }
 body{
-	background-image:url("../images/floor13.jpg");
+	background-image:url("../images/floor.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	overflow: hidden;
@@ -11,9 +11,10 @@ body{
 .loadingPage{
 	width: 100%;
 	height: 100%;
-	background-color: #81BEF7;
-	background-image: url("../images/loading45.gif");
-	background-size: 100%;
+	background-color: #ffffff;
+	background-image: url("../images/loading.gif");
+	background-size: 50%;
+	line-height: 100px;
 	background-repeat: no-repeat;
 	position: absolute;
 	z-index: 10;
@@ -31,15 +32,15 @@ body{
 .background{
 	margin:100px auto;
 	width:1200px;
-	height:500px;
+	height:440px;
+	position: relative;
 }
 .board{
 	position: relative;
 	width: 770px;
 	height: 430px;
-	background-image:url('../images/final-board.png');
+	background-image:url('../images/pool-board.png');
 	float: left;
-	top: 38px;
 	border-radius: 5%;
 	display: block;
 }
@@ -50,10 +51,15 @@ body{
 	width: 400px;
 	height: 200px;
 	line-height: 200px;
+	font-size: 32px;
+	color: green;
 	text-align: center;
 	border-radius: 5%;
-	background-color: orange;
+	background-image: url("../images/browngradient.jpg");
+	background-width:100%;
+	background-repeat: no-repeat;
 	visibility: hidden;
+
 }
 .info-board img{
 	width: 100%;
@@ -66,7 +72,7 @@ body{
 	border-radius: 12px;
 	top: 0px;
 	left: 0px;
-	background:url("../images/blue-ball.png");
+	background-image:url("../images/blue-ball.png");
 }
 .redBall{
 	position: absolute;
@@ -75,7 +81,8 @@ body{
 	border-radius: 12px;
 	top: 0px;
 	left: 0px;
-	background:url("../images/zred1.png");
+	background-image:url("../images/red-ball.png");
+	background-size: 100%;
 }
 .whiteBall{
 	position: absolute;
@@ -84,7 +91,8 @@ body{
 	border-radius: 12px;
 	top: 0px;
 	left: 0px;
-	background-color:white; 
+	background-image:url("../images/white-ball.jpg");
+	background-size: 100%;
 }
 .blackBall{
 	position: absolute;
@@ -93,9 +101,10 @@ body{
 	border-radius: 12px;
 	top: 0px;
 	left: 0px;
-	background-color: black;
+	background-image:url("../images/black-ball.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
-
 .stick{
 	height: 12px;
 	position: relative;
@@ -104,7 +113,7 @@ body{
 .innerstick{
 	width: 383px;
 	height: 12px;
-	background:url('../images/stick1.png');
+	background:url('../images/stick.png');
 	position: absolute;
 	float: left;
 	display: block;
@@ -123,14 +132,16 @@ body{
 	position: relative;
 	overflow: hidden;
 	float: left;
-	margin-top:40px;
-	background-image:url("../images/game-over.jpg");
+	background-image:url("../images/power-wrapper.jpeg");
 	background-size: 100%;
 }
 .pow-bg{
 	width: 170px;
 	height: 300px;
-	background-color: red;
+	background-image:url("../images/power-bg.png");
+	background-width: 100%;
+	background-height:100%;
+	background-repeat: no-repeat;
 	position: absolute;
 	top:20px;
 }
@@ -138,22 +149,21 @@ body{
 	float: left;
 	position: relative;
 	width: 240px;
-	height: 500px; 
-	background-image:url("../images/floor10.jpeg");
+	background-image:url("../images/score-wrp.jpeg");
 	background-size: 100%;
+	margin-right: 5px;
 }
 .score-main{
 	border: 3px solid red;
 	width: 90%;
-	margin: 30px auto;
-	height: 200px;
+	margin: 20px auto;
 	background-color: green;
 }
 .score-block{
 	margin: 10px auto;
 	width: 100%;
-	background-image:url("../images/floor8.jpeg");
-	height: 30px;
+	background-image:url("../images/score-block.jpeg");
+	height: 25px;
 	text-align: center;
 	line-height: 20px;
 	font-family: sans-serif;
