@@ -28,9 +28,9 @@ function Game(){
 			gameWindow1.bg.scoreBoard.assignValue(displayContents);
 		}		
 		var mainInterval = function(){
-			if(loadingCounter < 1000){
+			if(loadingCounter < 500){
 				loadingCounter++;
-				loadGame.loadingMover(1000);
+				loadGame.loadingMover(500);
 			}
 			else{
 				if(powerFlag == true){
